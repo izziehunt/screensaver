@@ -69,8 +69,8 @@ body {
     radial-gradient(circle at 76% 22%, rgba(255, 222, 128, 0.52) 0%, transparent 52%),
     radial-gradient(circle at 58% 80%, rgba(239, 159, 193, 0.46) 0%, transparent 55%);
   mix-blend-mode: screen;
-  filter: blur(16px);
-  animation: shimmer-water 11s ease-in-out infinite alternate;
+  filter: blur(12px);
+  animation: shimmer-water 18s ease-in-out infinite alternate;
 }
 
 .stage::after {
@@ -85,9 +85,9 @@ body {
     transparent 52px
   );
   mix-blend-mode: soft-light;
-  filter: blur(2px);
-  opacity: 0.72;
-  animation: ripple-drift 12s linear infinite;
+  filter: blur(1px);
+  opacity: 0.42;
+  animation: ripple-drift 30s ease-in-out infinite;
 }
 
 .backglow {
@@ -108,8 +108,8 @@ body {
       rgba(255, 217, 109, 0.6) 0%,
       transparent 58%
     );
-  filter: blur(34px) saturate(1.2);
-  animation: breathe 10s ease-in-out infinite alternate;
+  filter: blur(24px) saturate(1.1);
+  animation: breathe 20s ease-in-out infinite alternate;
 }
 
 .backglow::before,
@@ -131,9 +131,9 @@ body {
     rgba(255, 243, 185, 0.28) 220deg,
     transparent 320deg
   );
-  filter: blur(18px);
-  opacity: 0.84;
-  animation: swirl-lines-a 13s ease-in-out infinite;
+  filter: blur(12px);
+  opacity: 0.65;
+  animation: swirl-lines-a 24s linear infinite;
 }
 
 .backglow::after {
@@ -151,9 +151,9 @@ body {
       rgba(239, 159, 193, 0.24) 62%,
       transparent 74%
     );
-  filter: blur(10px);
-  opacity: 0.72;
-  animation: swirl-lines-b 16s ease-in-out infinite;
+  filter: blur(7px);
+  opacity: 0.5;
+  animation: swirl-lines-b 30s linear infinite;
 }
 
 .aurora {
@@ -164,8 +164,8 @@ body {
   top: 20vh;
   border-radius: 48% 52% 46% 54% / 58% 44% 56% 42%;
   mix-blend-mode: screen;
-  filter: blur(11px) saturate(1.15);
-  will-change: transform, border-radius;
+  filter: blur(8px) saturate(1.08);
+  will-change: transform, opacity;
 }
 
 .aurora-a {
@@ -177,7 +177,7 @@ body {
     rgba(255, 217, 109, 0.48) 78%,
     rgba(182, 242, 238, 0.44) 100%
   );
-  animation: sweep-a 12s ease-in-out infinite;
+  animation: sweep-a 20s ease-in-out infinite;
 }
 
 .aurora-b {
@@ -192,8 +192,8 @@ body {
     rgba(239, 159, 193, 0.56) 68%,
     transparent 100%
   );
-  animation: sweep-b 14s ease-in-out infinite;
-  opacity: 0.94;
+  animation: sweep-b 24s ease-in-out infinite;
+  opacity: 0.78;
 }
 
 .aurora-c {
@@ -209,15 +209,15 @@ body {
     rgba(244, 191, 209, 0.44) 78%,
     rgba(200, 246, 219, 0.26) 100%
   );
-  animation: sweep-c 10s ease-in-out infinite;
-  opacity: 0.9;
+  animation: sweep-c 18s ease-in-out infinite;
+  opacity: 0.72;
 }
 
 .silhouette {
   position: absolute;
   pointer-events: none;
   mix-blend-mode: screen;
-  filter: blur(10px) saturate(1.1);
+  filter: blur(8px) saturate(1.05);
 }
 
 .silhouette-a {
@@ -239,7 +239,7 @@ body {
       transparent 100%
     );
   transform-origin: 60% 80%;
-  animation: sway-a 9s ease-in-out infinite;
+  animation: sway-a 20s ease-in-out infinite;
 }
 
 .silhouette-b {
@@ -260,8 +260,8 @@ body {
       rgba(140, 201, 209, 0.62) 66%,
       transparent 100%
     );
-  animation: sway-b 11s ease-in-out infinite;
-  opacity: 0.82;
+  animation: sway-b 24s ease-in-out infinite;
+  opacity: 0.68;
 }
 
 .highlight {
@@ -279,8 +279,8 @@ body {
       transparent 65%
     );
   mix-blend-mode: screen;
-  filter: blur(14px);
-  animation: shimmer 8s ease-in-out infinite;
+  filter: blur(10px);
+  animation: shimmer 18s ease-in-out infinite;
 }
 
 .vignette {
@@ -309,8 +309,8 @@ body {
     rgba(255, 255, 255, 0.22) 0%,
     transparent 72%
   );
-  filter: blur(8px);
-  animation: float 18s linear infinite;
+  filter: blur(6px);
+  animation: float 28s linear infinite;
 }
 
 .drift span:nth-child(1) {
@@ -345,46 +345,36 @@ body {
 @keyframes sweep-a {
   0% {
     transform: translate3d(-10vw, -1vh, 0) rotate(-6deg) scale(1);
-    border-radius: 48% 52% 46% 54% / 58% 44% 56% 42%;
   }
   25% {
     transform: translate3d(-2vw, -7vh, 0) rotate(-1deg) scale(1.04);
-    border-radius: 56% 44% 54% 46% / 46% 54% 44% 56%;
   }
   50% {
     transform: translate3d(12vw, -2vh, 0) rotate(5deg) scale(1.08);
-    border-radius: 58% 42% 54% 46% / 44% 56% 46% 54%;
   }
   75% {
     transform: translate3d(3vw, 6vh, 0) rotate(0deg) scale(1.03);
-    border-radius: 46% 54% 50% 50% / 52% 42% 58% 48%;
   }
   100% {
     transform: translate3d(-10vw, -1vh, 0) rotate(-6deg) scale(1);
-    border-radius: 48% 52% 46% 54% / 58% 44% 56% 42%;
   }
 }
 
 @keyframes sweep-b {
   0% {
     transform: translate3d(14vw, 4vh, 0) rotate(7deg) scale(1.02);
-    border-radius: 50% 50% 44% 56% / 54% 42% 58% 46%;
   }
   25% {
     transform: translate3d(6vw, -5vh, 0) rotate(2deg) scale(1.06);
-    border-radius: 44% 56% 48% 52% / 46% 54% 42% 58%;
   }
   50% {
     transform: translate3d(-10vw, -2vh, 0) rotate(-5deg) scale(1.08);
-    border-radius: 42% 58% 52% 48% / 44% 58% 42% 56%;
   }
   75% {
     transform: translate3d(-1vw, 7vh, 0) rotate(1deg) scale(1.04);
-    border-radius: 54% 46% 44% 56% / 58% 42% 56% 44%;
   }
   100% {
     transform: translate3d(14vw, 4vh, 0) rotate(7deg) scale(1.02);
-    border-radius: 50% 50% 44% 56% / 54% 42% 58% 46%;
   }
 }
 
@@ -433,46 +423,36 @@ body {
 @keyframes sway-a {
   0% {
     transform: translate3d(0, 0, 0) rotate(-6deg) scale(1);
-    border-radius: 52% 48% 42% 58% / 40% 45% 55% 60%;
   }
   25% {
     transform: translate3d(-3vw, 3vh, 0) rotate(-1deg) scale(1.06);
-    border-radius: 48% 52% 50% 50% / 46% 44% 56% 54%;
   }
   50% {
     transform: translate3d(1vw, 7vh, 0) rotate(7deg) scale(1.1);
-    border-radius: 46% 54% 48% 52% / 48% 40% 60% 52%;
   }
   75% {
     transform: translate3d(3vw, 3vh, 0) rotate(2deg) scale(1.05);
-    border-radius: 56% 44% 46% 54% / 52% 40% 60% 48%;
   }
   100% {
     transform: translate3d(0, 0, 0) rotate(-6deg) scale(1);
-    border-radius: 52% 48% 42% 58% / 40% 45% 55% 60%;
   }
 }
 
 @keyframes sway-b {
   0% {
     transform: translate3d(0, 0, 0) rotate(7deg) scale(1);
-    border-radius: 56% 44% 50% 50% / 36% 42% 58% 64%;
   }
   25% {
     transform: translate3d(4vw, -3vh, 0) rotate(2deg) scale(1.05);
-    border-radius: 50% 50% 44% 56% / 42% 38% 62% 58%;
   }
   50% {
     transform: translate3d(6vw, 1vh, 0) rotate(-6deg) scale(1.1);
-    border-radius: 50% 50% 44% 56% / 42% 38% 62% 58%;
   }
   75% {
     transform: translate3d(2vw, 4vh, 0) rotate(1deg) scale(1.04);
-    border-radius: 58% 42% 48% 52% / 38% 46% 54% 62%;
   }
   100% {
     transform: translate3d(0, 0, 0) rotate(7deg) scale(1);
-    border-radius: 56% 44% 50% 50% / 36% 42% 58% 64%;
   }
 }
 
