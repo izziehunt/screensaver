@@ -120,6 +120,44 @@ body {
   animation: line-sweep-c 20s ease-in-out infinite;
 }
 
+.sun-streaks {
+  position: absolute;
+  inset: -14%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+}
+
+.sun-streaks-a {
+  background: repeating-linear-gradient(
+    116deg,
+    rgba(255, 243, 185, 0.34) 0px,
+    rgba(255, 243, 185, 0.34) 5px,
+    rgba(255, 224, 138, 0.26) 10px,
+    rgba(255, 224, 138, 0.26) 16px,
+    transparent 26px,
+    transparent 44px
+  );
+  opacity: 0.46;
+  filter: blur(4px);
+  animation: sun-streak-drift-a 14s ease-in-out infinite;
+}
+
+.sun-streaks-b {
+  background: repeating-linear-gradient(
+    104deg,
+    rgba(255, 255, 230, 0.24) 0px,
+    rgba(255, 255, 230, 0.24) 4px,
+    rgba(255, 209, 92, 0.2) 9px,
+    rgba(255, 209, 92, 0.2) 14px,
+    transparent 24px,
+    transparent 40px
+  );
+  opacity: 0.34;
+  filter: blur(8px);
+  animation: sun-streak-drift-b 20s ease-in-out infinite;
+}
+
 .orb {
   position: absolute;
   border-radius: 50%;
@@ -255,6 +293,30 @@ body {
   }
   100% {
     transform: translate3d(-10vw, -3vh, 0) rotate(-8deg) scale(1);
+  }
+}
+
+@keyframes sun-streak-drift-a {
+  0%,
+  100% {
+    transform: translate3d(-4vw, -2vh, 0) rotate(-2deg) scale(1);
+    opacity: 0.38;
+  }
+  50% {
+    transform: translate3d(5vw, 3vh, 0) rotate(2deg) scale(1.05);
+    opacity: 0.58;
+  }
+}
+
+@keyframes sun-streak-drift-b {
+  0%,
+  100% {
+    transform: translate3d(3vw, -3vh, 0) rotate(1deg) scale(1.02);
+    opacity: 0.28;
+  }
+  50% {
+    transform: translate3d(-4vw, 4vh, 0) rotate(-2deg) scale(1.08);
+    opacity: 0.46;
   }
 }
 
