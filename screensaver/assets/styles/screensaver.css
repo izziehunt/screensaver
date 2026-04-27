@@ -55,6 +55,8 @@ body {
   overflow: hidden;
   background: radial-gradient(circle at 30% 24%, #edf7f8 0%, var(--base) 42%),
     linear-gradient(160deg, #d8f0ef 0%, #acdbe1 45%, #cbeed8 100%);
+  background-size: 130% 130%, 120% 120%;
+  animation: tide-shift 18s ease-in-out infinite;
 }
 
 .stage::before {
@@ -65,8 +67,8 @@ body {
     radial-gradient(circle at 76% 22%, rgba(255, 241, 210, 0.38) 0%, transparent 52%),
     radial-gradient(circle at 58% 80%, rgba(255, 214, 228, 0.3) 0%, transparent 55%);
   mix-blend-mode: screen;
-  filter: blur(20px);
-  animation: shimmer-water 20s ease-in-out infinite alternate;
+  filter: blur(16px);
+  animation: shimmer-water 11s ease-in-out infinite alternate;
 }
 
 .stage::after {
@@ -81,9 +83,9 @@ body {
     transparent 52px
   );
   mix-blend-mode: soft-light;
-  filter: blur(4px);
-  opacity: 0.55;
-  animation: ripple-drift 28s linear infinite;
+  filter: blur(2px);
+  opacity: 0.72;
+  animation: ripple-drift 12s linear infinite;
 }
 
 .backglow {
@@ -104,8 +106,8 @@ body {
       rgba(255, 234, 161, 0.46) 0%,
       transparent 58%
     );
-  filter: blur(44px) saturate(1.08);
-  animation: breathe 24s ease-in-out infinite alternate;
+  filter: blur(34px) saturate(1.2);
+  animation: breathe 10s ease-in-out infinite alternate;
 }
 
 .aurora {
@@ -115,8 +117,8 @@ body {
   left: -30vw;
   top: 20vh;
   border-radius: 48% 52% 46% 54% / 58% 44% 56% 42%;
-  mix-blend-mode: soft-light;
-  filter: blur(17px) saturate(1.05);
+  mix-blend-mode: screen;
+  filter: blur(11px) saturate(1.15);
   will-change: transform, border-radius;
 }
 
@@ -128,7 +130,7 @@ body {
     rgba(246, 211, 220, 0.66) 58%,
     rgba(182, 242, 238, 0.5) 100%
   );
-  animation: sweep-a 34s ease-in-out infinite;
+  animation: sweep-a 12s ease-in-out infinite;
 }
 
 .aurora-b {
@@ -143,8 +145,8 @@ body {
     rgba(246, 211, 220, 0.45) 72%,
     transparent 100%
   );
-  animation: sweep-b 38s ease-in-out infinite;
-  opacity: 0.88;
+  animation: sweep-b 14s ease-in-out infinite;
+  opacity: 0.94;
 }
 
 .aurora-c {
@@ -159,15 +161,15 @@ body {
     rgba(255, 234, 161, 0.3) 56%,
     rgba(200, 246, 219, 0.34) 100%
   );
-  animation: sweep-c 32s ease-in-out infinite;
-  opacity: 0.78;
+  animation: sweep-c 10s ease-in-out infinite;
+  opacity: 0.9;
 }
 
 .silhouette {
   position: absolute;
   pointer-events: none;
-  mix-blend-mode: soft-light;
-  filter: blur(14px) saturate(1.05);
+  mix-blend-mode: screen;
+  filter: blur(10px) saturate(1.1);
 }
 
 .silhouette-a {
@@ -189,7 +191,7 @@ body {
       transparent 100%
     );
   transform-origin: 60% 80%;
-  animation: sway-a 18s ease-in-out infinite;
+  animation: sway-a 9s ease-in-out infinite;
 }
 
 .silhouette-b {
@@ -210,7 +212,7 @@ body {
       rgba(140, 201, 209, 0.62) 66%,
       transparent 100%
     );
-  animation: sway-b 22s ease-in-out infinite;
+  animation: sway-b 11s ease-in-out infinite;
   opacity: 0.82;
 }
 
@@ -228,9 +230,9 @@ body {
       rgba(255, 234, 161, 0.32) 0%,
       transparent 65%
     );
-  mix-blend-mode: soft-light;
-  filter: blur(20px);
-  animation: shimmer 18s ease-in-out infinite;
+  mix-blend-mode: screen;
+  filter: blur(14px);
+  animation: shimmer 8s ease-in-out infinite;
 }
 
 .vignette {
@@ -259,8 +261,8 @@ body {
     rgba(255, 255, 255, 0.22) 0%,
     transparent 72%
   );
-  filter: blur(12px);
-  animation: float 36s linear infinite;
+  filter: blur(8px);
+  animation: float 18s linear infinite;
 }
 
 .drift span:nth-child(1) {
@@ -283,11 +285,11 @@ body {
 
 @keyframes breathe {
   from {
-    transform: scale(1) translate3d(0, 0, 0);
-    opacity: 0.85;
+    transform: scale(1) translate3d(-1vw, 1vh, 0) rotate(-2deg);
+    opacity: 0.75;
   }
   to {
-    transform: scale(1.09) translate3d(2vw, -1.2vh, 0);
+    transform: scale(1.14) translate3d(5vw, -3vh, 0) rotate(3deg);
     opacity: 1;
   }
 }
@@ -295,11 +297,11 @@ body {
 @keyframes sweep-a {
   0%,
   100% {
-    transform: translate3d(-6vw, 0, 0) rotate(-6deg);
+    transform: translate3d(-16vw, 2vh, 0) rotate(-10deg) scale(1);
     border-radius: 48% 52% 46% 54% / 58% 44% 56% 42%;
   }
   50% {
-    transform: translate3d(10vw, -4vh, 0) rotate(5deg);
+    transform: translate3d(18vw, -8vh, 0) rotate(11deg) scale(1.07);
     border-radius: 58% 42% 54% 46% / 44% 56% 46% 54%;
   }
 }
@@ -307,11 +309,11 @@ body {
 @keyframes sweep-b {
   0%,
   100% {
-    transform: translate3d(10vw, 2vh, 0) rotate(7deg);
+    transform: translate3d(22vw, 5vh, 0) rotate(10deg) scale(1.03);
     border-radius: 50% 50% 44% 56% / 54% 42% 58% 46%;
   }
   50% {
-    transform: translate3d(-8vw, -3vh, 0) rotate(-4deg);
+    transform: translate3d(-18vw, -7vh, 0) rotate(-9deg) scale(1.08);
     border-radius: 42% 58% 52% 48% / 44% 58% 42% 56%;
   }
 }
@@ -319,45 +321,45 @@ body {
 @keyframes sweep-c {
   0%,
   100% {
-    transform: translate3d(-4vw, -2vh, 0) rotate(-8deg);
+    transform: translate3d(-12vw, -4vh, 0) rotate(-12deg) scale(1);
   }
   50% {
-    transform: translate3d(8vw, 4vh, 0) rotate(6deg);
+    transform: translate3d(16vw, 8vh, 0) rotate(12deg) scale(1.06);
   }
 }
 
 @keyframes shimmer-water {
   0%,
   100% {
-    transform: translate3d(0, 0, 0) scale(1);
-    opacity: 0.82;
+    transform: translate3d(-2vw, 1vh, 0) scale(1);
+    opacity: 0.7;
   }
   50% {
-    transform: translate3d(1.6vw, -1.4vh, 0) scale(1.04);
+    transform: translate3d(4vw, -3vh, 0) scale(1.08);
     opacity: 1;
   }
 }
 
 @keyframes ripple-drift {
   0% {
-    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    transform: translate3d(-4vw, 2vh, 0) rotate(-2deg) scale(1);
   }
   50% {
-    transform: translate3d(-2vw, 1.5vh, 0) rotate(2deg) scale(1.04);
+    transform: translate3d(4vw, -2vh, 0) rotate(3deg) scale(1.09);
   }
   100% {
-    transform: translate3d(2vw, -1vh, 0) rotate(-1deg) scale(1.02);
+    transform: translate3d(-3vw, 2vh, 0) rotate(-2deg) scale(1.04);
   }
 }
 
 @keyframes sway-a {
   0%,
   100% {
-    transform: translate3d(0, 0, 0) rotate(-3deg) scale(1);
+    transform: translate3d(-1vw, 1vh, 0) rotate(-8deg) scale(1);
     border-radius: 52% 48% 42% 58% / 40% 45% 55% 60%;
   }
   50% {
-    transform: translate3d(-2vw, 1.5vh, 0) rotate(4deg) scale(1.03);
+    transform: translate3d(-6vw, 4vh, 0) rotate(10deg) scale(1.1);
     border-radius: 46% 54% 48% 52% / 48% 40% 60% 52%;
   }
 }
@@ -365,11 +367,11 @@ body {
 @keyframes sway-b {
   0%,
   100% {
-    transform: translate3d(0, 0, 0) rotate(4deg) scale(1);
+    transform: translate3d(2vw, -1vh, 0) rotate(9deg) scale(1);
     border-radius: 56% 44% 50% 50% / 36% 42% 58% 64%;
   }
   50% {
-    transform: translate3d(2vw, -2vh, 0) rotate(-4deg) scale(1.04);
+    transform: translate3d(7vw, -5vh, 0) rotate(-10deg) scale(1.12);
     border-radius: 50% 50% 44% 56% / 42% 38% 62% 58%;
   }
 }
@@ -377,18 +379,18 @@ body {
 @keyframes shimmer {
   0%,
   100% {
-    transform: translate3d(0, 0, 0) scale(1);
-    opacity: 0.65;
+    transform: translate3d(-1vw, 0.5vh, 0) scale(0.96);
+    opacity: 0.55;
   }
   50% {
-    transform: translate3d(1.2vw, -1vh, 0) scale(1.06);
+    transform: translate3d(3vw, -3vh, 0) scale(1.14);
     opacity: 0.95;
   }
 }
 
 @keyframes float {
   0% {
-    transform: translate3d(0, 0, 0) scale(0.9);
+    transform: translate3d(-2vw, 0, 0) scale(0.8);
     opacity: 0;
   }
   14%,
@@ -396,8 +398,18 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translate3d(0, -86vh, 0) scale(1.18);
+    transform: translate3d(8vw, -100vh, 0) scale(1.26);
     opacity: 0;
+  }
+}
+
+@keyframes tide-shift {
+  0%,
+  100% {
+    background-position: 0% 40%, 0% 50%;
+  }
+  50% {
+    background-position: 100% 55%, 100% 50%;
   }
 }
 
