@@ -26,13 +26,13 @@
 }
 
 :root {
-  --bg-0: #091227;
-  --bg-1: #162546;
-  --cyan: #78d8ff;
-  --violet: #a987ff;
-  --pink: #ff8ecf;
-  --gold: #ffd67d;
-  --mint: #88ffd7;
+  --bg-0: #0f1f3d;
+  --bg-1: #223a6b;
+  --cyan: #8ee9ff;
+  --violet: #b89cff;
+  --pink: #ff9fd9;
+  --gold: #ffe08f;
+  --mint: #a0ffe1;
 }
 
 * {
@@ -54,16 +54,16 @@ body {
   position: fixed;
   inset: 0;
   overflow: hidden;
-  background: radial-gradient(circle at 25% 20%, var(--bg-1) 0%, var(--bg-0) 58%);
+  background: radial-gradient(circle at 24% 20%, #2c4d8c 0%, var(--bg-0) 58%);
 }
 
 .gradient-field {
   position: absolute;
   inset: -16%;
-  background: radial-gradient(circle at 18% 64%, rgba(120, 216, 255, 0.42) 0%, transparent 48%),
-    radial-gradient(circle at 76% 22%, rgba(255, 214, 125, 0.36) 0%, transparent 52%),
-    radial-gradient(circle at 60% 74%, rgba(255, 142, 207, 0.38) 0%, transparent 50%),
-    radial-gradient(circle at 52% 38%, rgba(136, 255, 215, 0.28) 0%, transparent 54%);
+  background: radial-gradient(circle at 18% 64%, rgba(142, 233, 255, 0.52) 0%, transparent 48%),
+    radial-gradient(circle at 76% 22%, rgba(255, 224, 143, 0.44) 0%, transparent 52%),
+    radial-gradient(circle at 60% 74%, rgba(255, 159, 217, 0.46) 0%, transparent 50%),
+    radial-gradient(circle at 52% 38%, rgba(160, 255, 225, 0.34) 0%, transparent 54%);
   mix-blend-mode: screen;
   filter: blur(36px);
   animation: field-drift 24s ease-in-out infinite;
@@ -85,10 +85,10 @@ body {
 .flow-lines-a {
   background: repeating-linear-gradient(
     102deg,
-    rgba(120, 216, 255, 0.35) 0px,
-    rgba(120, 216, 255, 0.35) 6px,
-    rgba(255, 142, 207, 0.28) 14px,
-    rgba(255, 142, 207, 0.28) 22px,
+    rgba(142, 233, 255, 0.44) 0px,
+    rgba(142, 233, 255, 0.44) 6px,
+    rgba(255, 159, 217, 0.36) 14px,
+    rgba(255, 159, 217, 0.36) 22px,
     transparent 34px,
     transparent 56px
   );
@@ -102,14 +102,14 @@ body {
   height: 44vh;
   background: repeating-linear-gradient(
     78deg,
-    rgba(255, 214, 125, 0.28) 0px,
-    rgba(255, 214, 125, 0.28) 5px,
-    rgba(136, 255, 215, 0.26) 12px,
-    rgba(136, 255, 215, 0.26) 20px,
+    rgba(255, 224, 143, 0.36) 0px,
+    rgba(255, 224, 143, 0.36) 5px,
+    rgba(160, 255, 225, 0.32) 12px,
+    rgba(160, 255, 225, 0.32) 20px,
     transparent 30px,
     transparent 50px
   );
-  opacity: 0.62;
+  opacity: 0.68;
   animation: line-sweep-b 24s ease-in-out infinite;
 }
 
@@ -120,14 +120,14 @@ body {
   height: 40vh;
   background: repeating-linear-gradient(
     126deg,
-    rgba(169, 135, 255, 0.28) 0px,
-    rgba(169, 135, 255, 0.28) 6px,
-    rgba(120, 216, 255, 0.22) 14px,
-    rgba(120, 216, 255, 0.22) 22px,
+    rgba(184, 156, 255, 0.34) 0px,
+    rgba(184, 156, 255, 0.34) 6px,
+    rgba(142, 233, 255, 0.28) 14px,
+    rgba(142, 233, 255, 0.28) 22px,
     transparent 34px,
     transparent 56px
   );
-  opacity: 0.5;
+  opacity: 0.62;
   animation: line-sweep-c 20s ease-in-out infinite;
 }
 
@@ -145,7 +145,7 @@ body {
   height: 42vmin;
   left: 18vw;
   top: 24vh;
-  background: radial-gradient(circle, rgba(120, 216, 255, 0.75) 0%, rgba(120, 216, 255, 0) 72%);
+  background: radial-gradient(circle, rgba(142, 233, 255, 0.82) 0%, rgba(142, 233, 255, 0) 72%);
   animation: orb-float-a 22s ease-in-out infinite;
 }
 
@@ -154,7 +154,7 @@ body {
   height: 52vmin;
   left: 56vw;
   top: 16vh;
-  background: radial-gradient(circle, rgba(255, 142, 207, 0.64) 0%, rgba(255, 142, 207, 0) 74%);
+  background: radial-gradient(circle, rgba(255, 159, 217, 0.76) 0%, rgba(255, 159, 217, 0) 74%);
   animation: orb-float-b 28s ease-in-out infinite;
 }
 
@@ -163,15 +163,15 @@ body {
   height: 38vmin;
   left: 46vw;
   top: 54vh;
-  background: radial-gradient(circle, rgba(255, 214, 125, 0.66) 0%, rgba(255, 214, 125, 0) 72%);
+  background: radial-gradient(circle, rgba(255, 224, 143, 0.78) 0%, rgba(255, 224, 143, 0) 72%);
   animation: orb-float-c 24s ease-in-out infinite;
 }
 
 .light-haze {
   position: absolute;
   inset: 8% 12%;
-  background: radial-gradient(circle at 28% 30%, rgba(255, 255, 255, 0.24) 0%, transparent 46%),
-    radial-gradient(circle at 72% 64%, rgba(255, 255, 255, 0.18) 0%, transparent 44%);
+  background: radial-gradient(circle at 28% 30%, rgba(255, 255, 255, 0.32) 0%, transparent 46%),
+    radial-gradient(circle at 72% 64%, rgba(255, 255, 255, 0.24) 0%, transparent 44%);
   mix-blend-mode: screen;
   filter: blur(24px);
   animation: haze-pulse 20s ease-in-out infinite;
@@ -180,7 +180,7 @@ body {
 .vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, transparent 38%, rgba(4, 12, 28, 0.48) 100%);
+  background: radial-gradient(circle at center, transparent 42%, rgba(7, 16, 36, 0.34) 100%);
 }
 
 .drift {
