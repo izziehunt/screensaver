@@ -26,13 +26,14 @@
 }
 
 :root {
-  --bg-0: #0d2b52;
-  --bg-1: #1f4f86;
-  --cyan: #8fe6ff;
-  --sky: #6fc8ff;
-  --gold: #ffe08a;
-  --sun: #ffd15c;
-  --foam: #b9fff0;
+  --bg-0: #0b3b63;
+  --bg-1: #1970a5;
+  --cyan: #37e3ff;
+  --sky: #2dc7ff;
+  --gold: #ffe44d;
+  --sun: #ffbd2f;
+  --foam: #52ffd1;
+  --reef: #39ff9f;
 }
 
 * {
@@ -54,16 +55,17 @@ body {
   position: fixed;
   inset: 0;
   overflow: hidden;
-  background: radial-gradient(circle at 24% 20%, #3a74b1 0%, var(--bg-0) 58%);
+  background: radial-gradient(circle at 24% 20%, #33a4da 0%, var(--bg-0) 58%);
 }
 
 .gradient-field {
   position: absolute;
   inset: -16%;
-  background: radial-gradient(circle at 18% 64%, rgba(143, 230, 255, 0.56) 0%, transparent 48%),
-    radial-gradient(circle at 76% 22%, rgba(255, 224, 138, 0.52) 0%, transparent 52%),
-    radial-gradient(circle at 60% 74%, rgba(111, 200, 255, 0.4) 0%, transparent 50%),
-    radial-gradient(circle at 52% 38%, rgba(185, 255, 240, 0.34) 0%, transparent 54%);
+  background: radial-gradient(circle at 18% 64%, rgba(55, 227, 255, 0.84) 0%, transparent 50%),
+    radial-gradient(circle at 76% 22%, rgba(255, 228, 77, 0.76) 0%, transparent 54%),
+    radial-gradient(circle at 60% 74%, rgba(45, 199, 255, 0.62) 0%, transparent 52%),
+    radial-gradient(circle at 52% 38%, rgba(82, 255, 209, 0.56) 0%, transparent 56%),
+    radial-gradient(circle at 35% 48%, rgba(57, 255, 159, 0.32) 0%, transparent 54%);
   mix-blend-mode: screen;
   filter: blur(22px);
   animation: field-drift 24s ease-in-out infinite;
@@ -74,7 +76,7 @@ body {
   inset: -12%;
   border-radius: 50%;
   mix-blend-mode: screen;
-  opacity: 0.62;
+  opacity: 0.72;
   filter: blur(5px);
   will-change: transform;
 }
@@ -82,54 +84,54 @@ body {
 .flow-lines-a {
   background: repeating-radial-gradient(
       ellipse at 30% 56%,
-      rgba(143, 230, 255, 0.24) 0px,
-      rgba(143, 230, 255, 0.24) 8px,
+      rgba(55, 227, 255, 0.5) 0px,
+      rgba(55, 227, 255, 0.5) 8px,
       transparent 18px,
       transparent 42px
     ),
     radial-gradient(
       110% 64% at 50% 56%,
-      rgba(143, 230, 255, 0.2) 0%,
-      rgba(111, 200, 255, 0.1) 28%,
+      rgba(55, 227, 255, 0.36) 0%,
+      rgba(45, 199, 255, 0.2) 28%,
       transparent 62%
     );
-  animation: line-sweep-a 24s ease-in-out infinite;
+  animation: line-sweep-a 30s cubic-bezier(0.42, 0, 0.2, 1) infinite;
 }
 
 .flow-lines-b {
   background: repeating-radial-gradient(
       ellipse at 66% 44%,
-      rgba(185, 255, 240, 0.22) 0px,
-      rgba(185, 255, 240, 0.22) 7px,
+      rgba(82, 255, 209, 0.4) 0px,
+      rgba(82, 255, 209, 0.4) 7px,
       transparent 16px,
       transparent 38px
     ),
     radial-gradient(
       120% 72% at 50% 50%,
-      rgba(255, 224, 138, 0.2) 0%,
-      rgba(143, 230, 255, 0.08) 40%,
+      rgba(255, 228, 77, 0.34) 0%,
+      rgba(55, 227, 255, 0.16) 40%,
       transparent 70%
     );
-  opacity: 0.56;
-  animation: line-sweep-b 30s ease-in-out infinite;
+  opacity: 0.64;
+  animation: line-sweep-b 36s cubic-bezier(0.42, 0, 0.2, 1) infinite;
 }
 
 .flow-lines-c {
   background: repeating-radial-gradient(
       ellipse at 48% 62%,
-      rgba(111, 200, 255, 0.2) 0px,
-      rgba(111, 200, 255, 0.2) 6px,
+      rgba(45, 199, 255, 0.38) 0px,
+      rgba(45, 199, 255, 0.38) 6px,
       transparent 14px,
       transparent 34px
     ),
     radial-gradient(
       130% 80% at 46% 48%,
-      rgba(255, 209, 92, 0.15) 0%,
-      rgba(143, 230, 255, 0.06) 44%,
+      rgba(255, 189, 47, 0.3) 0%,
+      rgba(57, 255, 159, 0.14) 44%,
       transparent 72%
     );
-  opacity: 0.5;
-  animation: line-sweep-c 34s ease-in-out infinite;
+  opacity: 0.58;
+  animation: line-sweep-c 40s cubic-bezier(0.42, 0, 0.2, 1) infinite;
 }
 
 .sun-streaks {
@@ -150,9 +152,9 @@ body {
     transparent 26px,
     transparent 44px
   );
-  opacity: 0.28;
+  opacity: 0.42;
   filter: blur(2px);
-  animation: sun-streak-drift-a 22s ease-in-out infinite;
+  animation: sun-streak-drift-a 30s cubic-bezier(0.42, 0, 0.2, 1) infinite;
 }
 
 .sun-streaks-b {
@@ -165,9 +167,9 @@ body {
     transparent 24px,
     transparent 40px
   );
-  opacity: 0.22;
+  opacity: 0.34;
   filter: blur(4px);
-  animation: sun-streak-drift-b 30s ease-in-out infinite;
+  animation: sun-streak-drift-b 40s cubic-bezier(0.42, 0, 0.2, 1) infinite;
 }
 
 .orb {
@@ -184,8 +186,8 @@ body {
   height: 42vmin;
   left: 18vw;
   top: 24vh;
-  background: radial-gradient(circle, rgba(143, 230, 255, 0.84) 0%, rgba(143, 230, 255, 0) 72%);
-  animation: orb-float-a 22s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(55, 227, 255, 0.95) 0%, rgba(55, 227, 255, 0) 74%);
+  animation: orb-float-a 30s cubic-bezier(0.42, 0, 0.2, 1) infinite;
 }
 
 .orb-b {
@@ -193,8 +195,8 @@ body {
   height: 52vmin;
   left: 56vw;
   top: 16vh;
-  background: radial-gradient(circle, rgba(255, 224, 138, 0.78) 0%, rgba(255, 224, 138, 0) 74%);
-  animation: orb-float-b 28s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(255, 228, 77, 0.92) 0%, rgba(255, 228, 77, 0) 76%);
+  animation: orb-float-b 36s cubic-bezier(0.42, 0, 0.2, 1) infinite;
 }
 
 .orb-c {
@@ -202,8 +204,8 @@ body {
   height: 38vmin;
   left: 46vw;
   top: 54vh;
-  background: radial-gradient(circle, rgba(255, 209, 92, 0.76) 0%, rgba(255, 209, 92, 0) 72%);
-  animation: orb-float-c 24s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(82, 255, 209, 0.88) 0%, rgba(82, 255, 209, 0) 74%);
+  animation: orb-float-c 34s cubic-bezier(0.42, 0, 0.2, 1) infinite;
 }
 
 .light-haze {
@@ -213,7 +215,7 @@ body {
     radial-gradient(circle at 72% 64%, rgba(255, 255, 255, 0.24) 0%, transparent 44%);
   mix-blend-mode: screen;
   filter: blur(12px);
-  animation: haze-pulse 20s ease-in-out infinite;
+  animation: haze-pulse 30s cubic-bezier(0.42, 0, 0.2, 1) infinite;
 }
 
 .vignette {
@@ -235,7 +237,7 @@ body {
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, transparent 72%);
   filter: blur(2px);
-  animation: float 34s linear infinite;
+  animation: float 42s linear infinite;
 }
 
 .drift span:nth-child(1) {
